@@ -1,22 +1,24 @@
 class Shelp < Formula
+  Version = '0.5.0'
+
+  if OS.mac?
+    Binary = "shelp_#{Version}_darwin_x86_64"
+    sha256 "18665382a6519b59741740cd9edbcc667be3bf99d06fd7d914274a30d5cba889"
+  elsif OS.linux?
+    Binary = "shelp_#{Version}_linux_x86_64"
+    sha256 "7a8797cbd3af61d0cb83b2ee6f8720a208c05e653871d55fee34b837c8f1e8bf"
+  end
+
+  url "https://github.com/progrhyme/shelp/releases/download/v#{Version}/#{Binary}"
   desc "Git-based package manager for shell scripts written in Go"
   homepage "https://github.com/progrhyme/shelp"
-  url "https://github.com/progrhyme/shelp/archive/v0.5.0.tar.gz"
-  sha256 "32ef1a1c0c85cc3fdca607dcc415d3032a9b3b770e6e7d1446c76ccb910c3c6a"
   head "https://github.com/progrhyme/shelp.git"
 
-  depends_on "go" => :build
-
   def install
-    ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/progrhyme/shelp").install buildpath.children
-    cd "src/github.com/progrhyme/shelp" do
-      system "go", "build", "-o", bin/"shelp"
-      prefix.install_metafiles
-    end
+    bin.install Binary => 'shelp'
   end
 
   test do
-    system "#{bin}/shelp", "--version"
+    system "#{bin}/shelp", '--version'
   end
 end
