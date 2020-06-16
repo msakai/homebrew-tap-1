@@ -1,12 +1,12 @@
 class Shelp < Formula
-  Version = '0.5.0'
+  Version = '0.5.1'
 
   if OS.mac?
     Binary = "shelp_#{Version}_darwin_x86_64"
-    sha256 "18665382a6519b59741740cd9edbcc667be3bf99d06fd7d914274a30d5cba889"
+    sha256 "70207befa0f7ad8f5366a5caa5ac4c76f11420ab3a2e01b5a1cd83281904b0b2"
   elsif OS.linux?
     Binary = "shelp_#{Version}_linux_x86_64"
-    sha256 "7a8797cbd3af61d0cb83b2ee6f8720a208c05e653871d55fee34b837c8f1e8bf"
+    sha256 "39f1bc19e6bad4c22a37b67565f40c8b58a1720e845c988a5b31a53973a8ef3a"
   end
 
   url "https://github.com/progrhyme/shelp/releases/download/v#{Version}/#{Binary}"
