@@ -1,5 +1,6 @@
 class Shelp < Formula
   Version = '0.5.1'
+  version Version
 
   if OS.mac?
     Binary = "shelp_#{Version}_darwin_x86_64"
@@ -10,9 +11,9 @@ class Shelp < Formula
   end
 
   url "https://github.com/progrhyme/shelp/releases/download/v#{Version}/#{Binary}"
-  desc "Git-based package manager for shell scripts written in Go"
-  homepage "https://github.com/progrhyme/shelp"
-  head "https://github.com/progrhyme/shelp.git"
+  desc 'Git-based package manager for shell scripts written in Go'
+  homepage 'https://github.com/progrhyme/shelp'
+  head 'https://github.com/progrhyme/shelp.git'
 
   def install
     bin.install Binary => 'shelp'
