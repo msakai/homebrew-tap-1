@@ -1,13 +1,13 @@
 class BinqGh < Formula
-  Version = '0.1.1'
+  Version = '0.2.0'
   version Version
 
   if OS.mac?
     Archive = "binq-gh_#{Version}_darwin_amd64.zip"
-    sha256 "d3f974fa56a9f935933e872014bfd1e9a4d0fbe6954bd64d49ff947f2bed490a"
+    sha256 "7832f95f597d4caa3eccb103dfbd76c9c65d7c4e01519da8868323e41ba6a200"
   elsif OS.linux?
     Archive = "binq-gh_#{Version}_linux_amd64.zip"
-    sha256 "b15fe65dd293b50de98d18bb38aab883f75a624bd5ce2316e30e63435694347c"
+    sha256 "26d2fa1e2384f8eb0412a66e4235d061670dec8c50df11cddea00a8271b92805"
   end
 
   url "https://github.com/progrhyme/binq-gh/releases/download/v#{Version}/#{Archive}"
