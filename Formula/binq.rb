@@ -1,13 +1,13 @@
 class Binq < Formula
-  Version = '0.6.3'
+  Version = '0.8.0'
   version Version
 
   if OS.mac?
     Archive = "binq_#{Version}_darwin_amd64.zip"
-    sha256 "b5566a9f5c35b88730d13a288a834081c92d921826824e8b85ae7154fefb446c"
+    sha256 "faab6ac95d1a29cd6387e5219e8289fdb236801950f3402b6184e4c55428f1cf"
   elsif OS.linux?
     Archive = "binq_#{Version}_linux_amd64.zip"
-    sha256 "a9a1fef48129be933c3d68ffb3761f7bd7373be3ee1152805f1a842522183da9"
+    sha256 "3596e9a1a65adc644cdb8e31db324d72fd2a4a3240aab04c48dcf1bb4d6a39b7"
   end
 
   url "https://github.com/progrhyme/binq/releases/download/v#{Version}/#{Archive}"
