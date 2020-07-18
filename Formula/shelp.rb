@@ -12,7 +12,7 @@ class Shelp < Formula
 
   url "https://github.com/progrhyme/shelp/releases/download/v#{Version}/#{Binary}"
   desc 'Git-based package manager for shell scripts written in Go'
-  homepage 'https://github.com/progrhyme/shelp'
+  homepage 'https://go-shelp.netlify.app/'
   head 'https://github.com/progrhyme/shelp.git'
 
   def install
